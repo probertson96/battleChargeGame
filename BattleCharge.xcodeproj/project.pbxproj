@@ -14,7 +14,7 @@
 		CD5DB7BD1BDF47360045A7FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5DB7BB1BDF47360045A7FA /* LaunchScreen.storyboard */; };
 		CD7E95B61BDF4C5600831B22 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD7E95B51BDF4C5600831B22 /* Minecraft.ttf */; };
 		CD7E95B81BDF4D1B00831B22 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7E95B71BDF4D1B00831B22 /* Character.swift */; };
-		CDAE6F6D1BDF4E1E00BED940 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE6F6C1BDF4E1E00BED940 /* Enemy.swift */; };
+		CDAE6F6F1BDF4FED00BED940 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE6F6E1BDF4FED00BED940 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		CD5DB7BE1BDF47360045A7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7E95B51BDF4C5600831B22 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		CD7E95B71BDF4D1B00831B22 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
-		CDAE6F6C1BDF4E1E00BED940 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		CDAE6F6E1BDF4FED00BED940 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				CD5DB7BB1BDF47360045A7FA /* LaunchScreen.storyboard */,
 				CD5DB7BE1BDF47360045A7FA /* Info.plist */,
 				CD7E95B71BDF4D1B00831B22 /* Character.swift */,
-				CDAE6F6C1BDF4E1E00BED940 /* Enemy.swift */,
+				CDAE6F6E1BDF4FED00BED940 /* Player.swift */,
 			);
 			path = BattleCharge;
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAE6F6D1BDF4E1E00BED940 /* Enemy.swift in Sources */,
+				CDAE6F6F1BDF4FED00BED940 /* Player.swift in Sources */,
 				CD7E95B81BDF4D1B00831B22 /* Character.swift in Sources */,
 				CD5DB7B51BDF47360045A7FA /* ViewController.swift in Sources */,
 				CD5DB7B31BDF47360045A7FA /* AppDelegate.swift in Sources */,

@@ -9,6 +9,8 @@
         <mutableArray key="Minecraft.ttf">
             <string>Minecraft</string>
             <string>Minecraft</string>
+            <string>Minecraft</string>
+            <string>Minecraft</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -84,6 +86,9 @@
                                     <constraint firstAttribute="height" constant="55" id="reO-9e-WmY"/>
                                 </constraints>
                                 <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="onPlayerOneAttackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eEb-VW-U3i"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qT7-r9-itk">
                                 <rect key="frame" x="402" y="287" width="152" height="55"/>
@@ -95,6 +100,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="152" id="koo-Yh-0o6"/>
                                 </constraints>
                                 <state key="normal" image="player2attackbtn"/>
+                                <connections>
+                                    <action selector="onPlayerTwoAttackPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xt9-Su-anU"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="text-holder" translatesAutoresizingMaskIntoConstraints="NO" id="0Vx-EF-Hhk">
                                 <rect key="frame" x="160" y="511" width="280" height="128"/>
@@ -129,16 +137,41 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usb-wv-Hli">
+                                <rect key="frame" x="470" y="571" width="78" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="8SH-ww-qkE"/>
+                                    <constraint firstAttribute="width" constant="78" id="GGn-GH-eSs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbT-tW-1Fa">
+                                <rect key="frame" x="50" y="571" width="78" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="1fe-6q-smL"/>
+                                    <constraint firstAttribute="height" constant="21" id="LaF-60-w5R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LEc-uB-CnS" secondAttribute="bottom" id="0L5-jL-bof"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="geG-XY-BHz" secondAttribute="bottom" id="3zQ-Ds-TQh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="usb-wv-Hli" secondAttribute="bottom" constant="8" id="73H-ho-pAy"/>
                             <constraint firstAttribute="bottomMargin" secondItem="0Vx-EF-Hhk" secondAttribute="bottom" constant="-39" id="8lT-TD-O1A"/>
                             <constraint firstItem="aY0-cX-PvS" firstAttribute="centerY" secondItem="MjX-ua-D34" secondAttribute="centerY" id="NKW-YO-2vx"/>
                             <constraint firstItem="0j8-UX-PT8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="O4N-Wo-d0u"/>
                             <constraint firstItem="k5y-PX-nsQ" firstAttribute="centerX" secondItem="0Vx-EF-Hhk" secondAttribute="centerX" id="OqZ-17-GX1"/>
+                            <constraint firstItem="mbT-tW-1Fa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Or0-zN-EEv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="usb-wv-Hli" secondAttribute="trailing" constant="32" id="PdG-Ul-bfl"/>
                             <constraint firstItem="jWi-73-yRh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qzw-S2-uxE"/>
                             <constraint firstItem="nKp-nk-tfn" firstAttribute="centerY" secondItem="qT7-r9-itk" secondAttribute="centerY" id="VO9-WJ-jDv"/>
                             <constraint firstItem="B2C-1M-dWC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="VYD-ar-km3"/>
@@ -158,11 +191,19 @@
                             <constraint firstItem="jWi-73-yRh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s8e-FV-aSw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="geG-XY-BHz" secondAttribute="trailing" constant="-51" id="uPb-9D-w0B"/>
                             <constraint firstItem="aY0-cX-PvS" firstAttribute="centerX" secondItem="MjX-ua-D34" secondAttribute="centerX" id="wr0-6i-xPG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mbT-tW-1Fa" secondAttribute="bottom" constant="8" id="xlu-Lj-nGA"/>
                             <constraint firstItem="jWi-73-yRh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xrP-qd-9sl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="B2C-1M-dWC" secondAttribute="bottom" id="ymF-RC-8Ty"/>
                             <constraint firstItem="LEc-uB-CnS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="223" id="zks-yL-iQB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerOneHpLabel" destination="mbT-tW-1Fa" id="ala-iv-Quc"/>
+                        <outlet property="playerOneImage" destination="0j8-UX-PT8" id="jrB-XD-nl3"/>
+                        <outlet property="playerTwoHpLabel" destination="usb-wv-Hli" id="4hC-Ji-Lz1"/>
+                        <outlet property="playerTwoImage" destination="q3D-Et-peY" id="m3k-O3-mNo"/>
+                        <outlet property="printLabel" destination="k5y-PX-nsQ" id="mKw-AO-zvp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

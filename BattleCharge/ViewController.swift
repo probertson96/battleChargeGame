@@ -9,17 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var playerOneHpLabel: UILabel!
+    @IBOutlet weak var playerTwoHpLabel: UILabel!
+    
+    @IBOutlet weak var printLabel: UILabel!
+    
+    @IBOutlet weak var playerOneImage: UIImageView!
+    @IBOutlet weak var playerTwoImage: UIImageView!
+    
+    
+    var playerOne: Player!
+    var playerTwo: Player!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        playerOne = Player(name: "Player 1", hp: 100, attackPower: 20)
+        playerTwo = Player(name: "Player 2", hp: 100, attackPower: 20)
+        
+        playerOneHpLabel.text = "HP: \(playerOne.hp)"
+        playerTwoHpLabel.text = "HP: \(playerTwo.hp)"
+
+    }
+    
+    
+    @IBAction func onPlayerOneAttackPressed(sender: AnyObject) {
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func onPlayerTwoAttackPressed(sender: AnyObject) {
     }
-
 
 }
 
