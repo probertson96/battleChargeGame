@@ -14,7 +14,11 @@
 		CD5DB7BD1BDF47360045A7FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5DB7BB1BDF47360045A7FA /* LaunchScreen.storyboard */; };
 		CD7E95B61BDF4C5600831B22 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD7E95B51BDF4C5600831B22 /* Minecraft.ttf */; };
 		CD7E95B81BDF4D1B00831B22 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7E95B71BDF4D1B00831B22 /* Character.swift */; };
+		CD869E9B1BE044E70054B13B /* bgmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CD869E9A1BE044E70054B13B /* bgmusic.mp3 */; };
 		CDAE6F6F1BDF4FED00BED940 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAE6F6E1BDF4FED00BED940 /* Player.swift */; };
+		CDBD7F291BE070BD0091965D /* playerOneHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = CDBD7F281BE070BD0091965D /* playerOneHit.wav */; };
+		CDBD7F2B1BE070D10091965D /* playerTwoHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = CDBD7F2A1BE070D10091965D /* playerTwoHit.wav */; };
+		CDBD7F2E1BE075230091965D /* winner.wav in Resources */ = {isa = PBXBuildFile; fileRef = CDBD7F2D1BE075230091965D /* winner.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +31,11 @@
 		CD5DB7BE1BDF47360045A7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD7E95B51BDF4C5600831B22 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
 		CD7E95B71BDF4D1B00831B22 /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		CD869E9A1BE044E70054B13B /* bgmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgmusic.mp3; sourceTree = "<group>"; };
 		CDAE6F6E1BDF4FED00BED940 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CDBD7F281BE070BD0091965D /* playerOneHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerOneHit.wav; sourceTree = "<group>"; };
+		CDBD7F2A1BE070D10091965D /* playerTwoHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = playerTwoHit.wav; sourceTree = "<group>"; };
+		CDBD7F2D1BE075230091965D /* winner.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = winner.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 		CD5DB7B11BDF47360045A7FA /* BattleCharge */ = {
 			isa = PBXGroup;
 			children = (
+				CD869E9A1BE044E70054B13B /* bgmusic.mp3 */,
+				CDBD7F2A1BE070D10091965D /* playerTwoHit.wav */,
+				CDBD7F281BE070BD0091965D /* playerOneHit.wav */,
+				CDBD7F2D1BE075230091965D /* winner.wav */,
 				CD7E95B51BDF4C5600831B22 /* Minecraft.ttf */,
 				CD5DB7B21BDF47360045A7FA /* AppDelegate.swift */,
 				CD5DB7B41BDF47360045A7FA /* ViewController.swift */,
@@ -105,7 +117,7 @@
 				TargetAttributes = {
 					CD5DB7AE1BDF47360045A7FA = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = RT33N9U2XV;
+						DevelopmentTeam = Y445TKE5TF;
 					};
 				};
 			};
@@ -132,6 +144,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDBD7F291BE070BD0091965D /* playerOneHit.wav in Resources */,
+				CDBD7F2E1BE075230091965D /* winner.wav in Resources */,
+				CD869E9B1BE044E70054B13B /* bgmusic.mp3 in Resources */,
+				CDBD7F2B1BE070D10091965D /* playerTwoHit.wav in Resources */,
 				CD5DB7BD1BDF47360045A7FA /* LaunchScreen.storyboard in Resources */,
 				CD5DB7BA1BDF47360045A7FA /* Assets.xcassets in Resources */,
 				CD7E95B61BDF4C5600831B22 /* Minecraft.ttf in Resources */,
@@ -262,10 +278,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BattleCharge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.probertson.BattleCharge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -273,10 +292,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BattleCharge/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.probertson.BattleCharge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

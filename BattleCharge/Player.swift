@@ -11,7 +11,7 @@ import Foundation
 class Player: Character {
     
     convenience init(name: String, hp: Int, attackPower: Int) {
-        self.init(startingHp: hp, attackPower: attackPower)
+        self.init(name: name, startingHp: hp, attackPower: attackPower)
         
     }
 }
